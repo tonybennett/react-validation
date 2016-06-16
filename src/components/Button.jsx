@@ -46,6 +46,6 @@ module.exports = React.createClass({
         className = classNames(className);
 
         // NOTE: Disabled state would be override by passing 'disabled' prop
-        return <input ref='element' disabled={this.state.isDisabled} {...this.props} className={className}/>;
+        return <button ref='element' disabled={this.state.isDisabled} {...this.props} className={className}>{this.props.value}</button>;
     }
 });

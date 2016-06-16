@@ -400,7 +400,7 @@
 /* 23 */
 /***/ function(module, exports) {
 
-	var core = module.exports = {version: '2.2.2'};
+	var core = module.exports = {version: '2.4.0'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
@@ -1400,7 +1400,11 @@
 	        className = classNames(className);
 
 	        // NOTE: Disabled state would be override by passing 'disabled' prop
-	        return React.createElement('input', (0, _extends3.default)({ ref: 'element', disabled: this.state.isDisabled }, this.props, { className: className }));
+	        return React.createElement(
+	            'button',
+	            (0, _extends3.default)({ ref: 'element', disabled: this.state.isDisabled }, this.props, { className: className }),
+	            this.props.value
+	        );
 	    }
 	});
 
